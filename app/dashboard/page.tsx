@@ -7,47 +7,53 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gradient-blue">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-black mb-12">Welcome to Your Dashboard, SURAJ PASWAN!</h1>
+      <main className="max-w-6xl mx-auto px-4 py-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">
+          Welcome to Your Dashboard, <span className="text-yellow-300">SURAJ PASWAN</span>!
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* View Form */}
           <Link href="/dashboard/view-form">
-            <div className="dashboard-card">
-              <div className="text-blue-600 mb-2">
+            <div className="dashboard-card hover:shadow-xl transition">
+              <div className="text-blue-600 mb-3">
                 <FileText size={40} />
               </div>
-              <h2 className="dashboard-card-title text-blue-600">View Form</h2>
-              <p className="dashboard-card-description">Click to view the form.</p>
+              <h2 className="text-xl font-bold text-blue-600 mb-1">View Form</h2>
+              <p className="text-gray-600 text-sm">Click to view your submitted form.</p>
             </div>
           </Link>
 
+          {/* Pay Exam Fees */}
           <Link href="/dashboard/pay-fees">
-            <div className="dashboard-card">
-              <div className="text-green-600 mb-2">
+            <div className="dashboard-card hover:shadow-xl transition">
+              <div className="text-green-600 mb-3">
                 <CreditCard size={40} />
               </div>
-              <h2 className="dashboard-card-title text-green-600">Pay Exam Fees</h2>
-              <p className="dashboard-card-description">Click to pay exam fees.</p>
+              <h2 className="text-xl font-bold text-green-600 mb-1">Pay Exam Fees</h2>
+              <p className="text-gray-600 text-sm">Proceed with secure payment for exams.</p>
             </div>
           </Link>
 
+          {/* Download Admit Card */}
           <Link href="/dashboard/admit-card">
-            <div className="dashboard-card">
-              <div className="text-red-600 mb-2">
+            <div className="dashboard-card hover:shadow-xl transition">
+              <div className="text-red-600 mb-3">
                 <FileCheck size={40} />
               </div>
-              <h2 className="dashboard-card-title text-red-600">Download Admit Card</h2>
-              <p className="dashboard-card-description">Click to download admit card.</p>
+              <h2 className="text-xl font-bold text-red-600 mb-1">Download Admit Card</h2>
+              <p className="text-gray-600 text-sm">Get your admit card instantly.</p>
             </div>
           </Link>
 
+          {/* View Results */}
           <Link href="/dashboard/results">
-            <div className="dashboard-card">
-              <div className="text-red-600 mb-2">
+            <div className="dashboard-card hover:shadow-xl transition">
+              <div className="text-purple-600 mb-3">
                 <BarChart size={40} />
               </div>
-              <h2 className="dashboard-card-title text-red-600">View Results</h2>
-              <p className="dashboard-card-description">Click to view results.</p>
+              <h2 className="text-xl font-bold text-purple-600 mb-1">View Results</h2>
+              <p className="text-gray-600 text-sm">Check your semester results.</p>
             </div>
           </Link>
         </div>

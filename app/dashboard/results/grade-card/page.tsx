@@ -7,8 +7,9 @@ export default function GradeCard() {
     <div className="min-h-screen bg-gradient-blue">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-8 flex justify-center">
-        <div className="bg-white rounded-lg p-8 w-full max-w-4xl">
+      <main className="container mx-auto px-4 py-8 flex flex-col items-center">
+        <div className="bg-white rounded-lg p-4 sm:p-8 w-full max-w-4xl">
+          {/* Header */}
           <div className="text-center mb-6">
             <h1 className="text-xl font-bold uppercase">RCC INSTITUTE OF INFORMATION TECHNOLOGY (AUTONOMOUS)</h1>
             <p className="text-sm">(Under Maulana Abul Kalam Azad University of Technology, West Bengal)</p>
@@ -23,125 +24,91 @@ export default function GradeCard() {
             </div>
           </div>
 
-          <div className="border border-black">
-            <table className="w-full border-collapse">
+          {/* ✅ Desktop Table View */}
+          <div className="hidden sm:block border border-black overflow-x-auto">
+            <table className="w-full border-collapse min-w-[700px]">
+              <thead className="bg-gray-100">
+                <tr className="border-b border-black">
+                  <th className="border-r border-black p-2 text-center">Subject Code</th>
+                  <th className="border-r border-black p-2 text-center">Subjects Offered</th>
+                  <th className="border-r border-black p-2 text-center">Letter Grade</th>
+                  <th className="border-r border-black p-2 text-center">Points</th>
+                  <th className="border-r border-black p-2 text-center">Credits</th>
+                  <th className="p-2 text-center">Credit Points</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2">
-                    <strong>Name:</strong> SURAJ PASWAN
-                  </td>
-                  <td className="p-2" colSpan={2}></td>
+                {[
+                  ["RCC-ESC-PH-101", "Physics", "D", 5, 4, 20],
+                  ["RCC-BSC-M-101", "Mathematics - I A", "C", 6, 4, 24],
+                  ["RCC-ESC-EE-101", "Basic Electrical Engineering", "D", 5, 4, 20],
+                  ["RCC-HSMC-101", "UHV – II Understanding Harmony", "A", 8, 2, 16],
+                  ["RCC-ESC-ME-192", "Workshop/ Manufacturing Practices", "E", 9, 2, 18],
+                  ["RCC-BSC-PH-191", "Physics Laboratory", "E", 9, 1, 9],
+                  ["RCC-ESC-EE-191", "Basic Electrical Engineering Laboratory", "E", 9, 1, 9],
+                  ["RCC-AU-182", "NSS & Yoga", "O", 0, 0, 0],
+                ].map(([code, subject, grade, points, credits, cp], i) => (
+                  <tr key={i} className="border-b border-black">
+                    <td className="border-r border-black p-2 text-center">{code}</td>
+                    <td className="border-r border-black p-2 text-center">{subject}</td>
+                    <td className="border-r border-black p-2 text-center">{grade}</td>
+                    <td className="border-r border-black p-2 text-center">{points}</td>
+                    <td className="border-r border-black p-2 text-center">{credits}</td>
+                    <td className="p-2 text-center">{cp}</td>
+                  </tr>
+                ))}
+                <tr className="border-b border-black font-bold">
+                  <td colSpan={3} className="border-r border-black p-2 text-center"></td>
+                  <td className="border-r border-black p-2 text-center">Total</td>
+                  <td className="border-r border-black p-2 text-center">18</td>
+                  <td className="p-2 text-center">116</td>
                 </tr>
                 <tr className="border-b border-black">
-                  <td className="border-r border-black p-2">
-                    <strong>Registration No:</strong> 241170110502 OF 2024-2025
-                  </td>
-                  <td className="p-2" colSpan={2}>
-                    <strong>Roll No:</strong> 11700224110
-                  </td>
+                  <td className="p-2" colSpan={6}><strong>SGPA:</strong> 6.4</td>
                 </tr>
                 <tr className="border-b border-black">
-                  <td className="p-2" colSpan={3}>
-                    <strong>Program:</strong> B.Tech-IT
-                  </td>
-                </tr>
-                <tr className="border-b border-black bg-gray-100">
-                  <th className="border-r border-black p-2 w-1/4 text-center">Subject Code</th>
-                  <th className="border-r border-black p-2 w-2/4 text-center">Subjects Offered</th>
-                  <th className="border-r border-black p-2 w-1/12 text-center">Letter Grade</th>
-                  <th className="border-r border-black p-2 w-1/12 text-center">Points</th>
-                  <th className="border-r border-black p-2 w-1/12 text-center">Credits</th>
-                  <th className="p-2 w-1/12 text-center">Credit Points</th>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-ESC-PH-101</td>
-                  <td className="border-r border-black p-2 text-center">Physics</td>
-                  <td className="border-r border-black p-2 text-center">D</td>
-                  <td className="border-r border-black p-2 text-center">5</td>
-                  <td className="border-r border-black p-2 text-center">4</td>
-                  <td className="p-2 text-center">20</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-BSC-M-101</td>
-                  <td className="border-r border-black p-2 text-center">Mathematics - I A</td>
-                  <td className="border-r border-black p-2 text-center">C</td>
-                  <td className="border-r border-black p-2 text-center">6</td>
-                  <td className="border-r border-black p-2 text-center">4</td>
-                  <td className="p-2 text-center">24</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-ESC-EE-101</td>
-                  <td className="border-r border-black p-2 text-center">Basic Electrical Engineering</td>
-                  <td className="border-r border-black p-2 text-center">D</td>
-                  <td className="border-r border-black p-2 text-center">5</td>
-                  <td className="border-r border-black p-2 text-center">4</td>
-                  <td className="p-2 text-center">20</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-HSMC-101</td>
-                  <td className="border-r border-black p-2 text-center">UHV – II Understanding Harmony</td>
-                  <td className="border-r border-black p-2 text-center">A</td>
-                  <td className="border-r border-black p-2 text-center">8</td>
-                  <td className="border-r border-black p-2 text-center">2</td>
-                  <td className="p-2 text-center">16</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-ESC-ME-192</td>
-                  <td className="border-r border-black p-2 text-center">Workshop/ Manufacturing Practices</td>
-                  <td className="border-r border-black p-2 text-center">E</td>
-                  <td className="border-r border-black p-2 text-center">9</td>
-                  <td className="border-r border-black p-2 text-center">2</td>
-                  <td className="p-2 text-center">18</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-BSC-PH-191</td>
-                  <td className="border-r border-black p-2 text-center">Physics Laboratory</td>
-                  <td className="border-r border-black p-2 text-center">E</td>
-                  <td className="border-r border-black p-2 text-center">9</td>
-                  <td className="border-r border-black p-2 text-center">1</td>
-                  <td className="p-2 text-center">9</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-ESC-EE-191</td>
-                  <td className="border-r border-black p-2 text-center">Basic Electrical Engineering Laboratory</td>
-                  <td className="border-r border-black p-2 text-center">E</td>
-                  <td className="border-r border-black p-2 text-center">9</td>
-                  <td className="border-r border-black p-2 text-center">1</td>
-                  <td className="p-2 text-center">9</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center">RCC-AU-182</td>
-                  <td className="border-r border-black p-2 text-center">NSS & Yoga</td>
-                  <td className="border-r border-black p-2 text-center">O</td>
-                  <td className="border-r border-black p-2 text-center">0</td>
-                  <td className="border-r border-black p-2 text-center">0</td>
-                  <td className="p-2 text-center">0</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="border-r border-black p-2 text-center" colSpan={3}></td>
-                  <td className="border-r border-black p-2 text-center font-bold">Total</td>
-                  <td className="border-r border-black p-2 text-center font-bold">18</td>
-                  <td className="p-2 text-center font-bold">116</td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="p-2" colSpan={6}>
-                    <strong>SGPA:</strong> 6.4
-                  </td>
-                </tr>
-                <tr className="border-b border-black">
-                  <td className="p-2" colSpan={6}>
-                    <strong>Result:</strong> P
-                  </td>
+                  <td className="p-2" colSpan={6}><strong>Result:</strong> P</td>
                 </tr>
                 <tr>
-                  <td className="p-2" colSpan={6}>
-                    <strong>Publication Date:</strong> 11/4/2025
-                  </td>
+                  <td className="p-2" colSpan={6}><strong>Publication Date:</strong> 11/4/2025</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
+          {/* ✅ Mobile Card View */}
+          <div className="block sm:hidden space-y-4">
+            {[
+              ["RCC-ESC-PH-101", "Physics", "D", 5, 4, 20],
+              ["RCC-BSC-M-101", "Mathematics - I A", "C", 6, 4, 24],
+              ["RCC-ESC-EE-101", "Basic Electrical Engineering", "D", 5, 4, 20],
+              ["RCC-HSMC-101", "UHV – II Understanding Harmony", "A", 8, 2, 16],
+              ["RCC-ESC-ME-192", "Workshop/ Manufacturing Practices", "E", 9, 2, 18],
+              ["RCC-BSC-PH-191", "Physics Laboratory", "E", 9, 1, 9],
+              ["RCC-ESC-EE-191", "Basic Electrical Engineering Laboratory", "E", 9, 1, 9],
+              ["RCC-AU-182", "NSS & Yoga", "O", 0, 0, 0],
+            ].map(([code, subject, grade, points, credits, cp], i) => (
+              <div key={i} className="border border-black rounded-md p-4 bg-white shadow">
+                <p><strong>Subject Code:</strong> {code}</p>
+                <p><strong>Subject:</strong> {subject}</p>
+                <p><strong>Letter Grade:</strong> {grade}</p>
+                <p><strong>Points:</strong> {points}</p>
+                <p><strong>Credits:</strong> {credits}</p>
+                <p><strong>Credit Points:</strong> {cp}</p>
+              </div>
+            ))}
+
+            {/* Summary */}
+            <div className="bg-white border border-black p-4 rounded-md shadow">
+              <p><strong>Total Credits:</strong> 18</p>
+              <p><strong>Total Credit Points:</strong> 116</p>
+              <p><strong>SGPA:</strong> 6.4</p>
+              <p><strong>Result:</strong> P</p>
+              <p><strong>Publication Date:</strong> 11/4/2025</p>
+            </div>
+          </div>
+
+          {/* Signature */}
           <div className="flex justify-between mt-8">
             <div></div>
             <div className="text-center">
@@ -151,29 +118,33 @@ export default function GradeCard() {
               <p className="text-sm">Controller of Examinations</p>
             </div>
           </div>
+        </div>
 
-          <div className="flex justify-center mt-8">
-  <div className="relative w-full max-w-4xl aspect-[210/297]">
+        {/* Grade Card Image (A4 View) */}
+<div className="flex justify-center mt-8 w-full px-4">
+  <div className="relative w-full max-w-4xl" style={{ aspectRatio: "210 / 297" }}>
     <Image
       src="/grade.jpg"
       alt="Grade Card"
       fill
       className="rounded-lg shadow-md object-contain"
+      priority
     />
   </div>
 </div>
 
-          <div className="mt-8 flex justify-center">
+        
+        
+        {/* Download PDF */}
+        <div className="mt-8 flex justify-center">
           <a
-  href="/grade-card.pdf"
-  download
-  className="bg-blue-500 text-white py-3 px-6 rounded-md flex items-center gap-2"
->
-  <Download size={20} />
-  Download PDF
-</a>
-
-          </div>
+            href="/grade-card.pdf"
+            download
+            className="bg-blue-500 text-white py-3 px-6 rounded-md flex items-center gap-2"
+          >
+            <Download size={20} />
+            Download PDF
+          </a>
         </div>
       </main>
     </div>
