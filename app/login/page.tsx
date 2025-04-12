@@ -18,7 +18,7 @@ export default function Login() {
       return
     }
 
-    if (password !== "Su@me") {
+    if (password !== "Surj@em") {
       setError("Incorrect password")
       return
     }
