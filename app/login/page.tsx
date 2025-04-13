@@ -42,7 +42,7 @@ export default function Login() {
             <input
               id="email"
               type="email"
-              placeholder="it2024082@rcciit.org.in"
+              placeholder="it2024XXX@rcciit.org.in"
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
