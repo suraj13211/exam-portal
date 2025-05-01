@@ -52,9 +52,9 @@ export default function GradeCard() {
               </thead>
               <tbody>
                 {[
-                  ["RCC-ESC-PH-101", "Physics", "D", 5, 4, 20],
+                  ["RCC-ESC-PH-101", "Physics", "C", 5, 4, 24],
                   ["RCC-BSC-M-101", "Mathematics - I A", "C", 6, 4, 24],
-                  ["RCC-ESC-EE-101", "Basic Electrical Engineering", "D", 5, 4, 20],
+                  ["RCC-ESC-EE-101", "Basic Electrical Engineering", "C", 5, 4, 24],
                   ["RCC-HSMC-101", "UHV – II Understanding Harmony", "A", 8, 2, 16],
                   ["RCC-ESC-ME-192", "Workshop/ Manufacturing Practices", "E", 9, 2, 18],
                   ["RCC-BSC-PH-191", "Physics Laboratory", "E", 9, 1, 9],
@@ -74,11 +74,11 @@ export default function GradeCard() {
                   <td colSpan={3} className="border-r border-black p-2 text-center"></td>
                   <td className="border-r border-black p-2 text-center">Total</td>
                   <td className="border-r border-black p-2 text-center">18</td>
-                  <td className="p-2 text-center">116</td>
+                  <td className="p-2 text-center">124</td>
                 </tr>
                 <tr className="border-b border-black">
                   <td className="p-2" colSpan={6}>
-                    <strong>SGPA:</strong> 6.4
+                    <strong>SGPA:</strong> 6.7
                   </td>
                 </tr>
                 <tr className="border-b border-black">
