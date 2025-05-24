@@ -52,9 +52,9 @@ export default function GradeCard() {
               </thead>
               <tbody>
                 {[
-                  ["RCC-ESC-PH-101", "Physics", "C", 5, 4, 24],
+                  ["RCC-ESC-PH-101", "Physics", "C", 6, 4, 24],
                   ["RCC-BSC-M-101", "Mathematics - I A", "C", 6, 4, 24],
-                  ["RCC-ESC-EE-101", "Basic Electrical Engineering", "C", 5, 4, 24],
+                  ["RCC-ESC-EE-101", "Basic Electrical Engineering", "C", 6, 4, 24],
                   ["RCC-HSMC-101", "UHV – II Understanding Harmony", "A", 8, 2, 16],
                   ["RCC-ESC-ME-192", "Workshop/ Manufacturing Practices", "E", 9, 2, 18],
                   ["RCC-BSC-PH-191", "Physics Laboratory", "E", 9, 1, 9],
